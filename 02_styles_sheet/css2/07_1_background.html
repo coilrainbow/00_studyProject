@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08_background</title>
+    <style>
+    .box{
+        border:1px red solid;
+        height:2000px;
+        
+        /*background-color:green; 지정된 영역에 색 채울 수 있다.  */
+        
+        
+        background-image:url(../../images/img1.jpg);
+         /*
+            주의할 점. 
+            width,height로 영역을 설정, 이미지의 경로확인,
+         */
+        
+        
+        /*default가 repeat이다. */
+        background-repeat: no-repeat;
+                         /*repeat
+                           repeat-x 가로로 반복. 더 많이 쓰임
+                           repeat-y 세로로 반복*/
+                           
+        /*background-position:center right;*/
+        background-position:center right 80px; 
+        /*offset값에는 px를 줄 수 있다.*/
+        
+        /*background-position:center center;*/
+        /*background-position:center;*/
+        
+        background-size:  200px 200px;
+        /*background-size: widthpx heightpx;*/
+        
+        background-size: cover ;
+        /*가장 긴값을 기준으로 화면에 맞춘다.*/
+        
+        background-size: contain;
+        /*이미지의 전체 비율을 유지하면서 사이즈가 조절되지만
+        여백이 생기는 단점이 있다.*/
+        background-attachment: fixed;
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+    background
+    background-image
+    background-color
+    background-position     이미지에만 적용이 됨.
+    background-repeat
+    background-size         css3에만 조정이 됨.
+    background-attachment
+    
+    background: 위의 것들은 한번에 나열하여 쓸 수 있다.;
+    문법은 이와 같다.
+    background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;
+    http://www.w3schools.com/cssref/css3_pr_background.asp 참고
+-->
+    <div class="box">    </div>
+
+
+
+
+
+
+</body>
+</html>

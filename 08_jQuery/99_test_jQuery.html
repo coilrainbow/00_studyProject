@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        
+        var obj={
+            'team1':[{
+                'userName':'서진석',
+                'pcNum':'07',
+                'class':'web'
+            },{
+                'userName':'장혜정',
+                'pcNum':'08',
+                'class':'web'
+            },{
+                'userName':'박태준',
+                'pcNum':'09',
+                'class':'web'
+            }]
+            
+        }
+        // console.log(obj.team1[0])
+        
+        $(function(){
+            var table_element = ''
+            
+            table_element += '<table>'
+            
+                $.each(obj.team1,function(i,e){
+                    
+                    // console.log(i,e)
+                    table_element += '<tr>'
+                        
+                        $.each(e,function(j,f){
+                            
+                            table_element += '<td>'
+                            table_element += f
+                            table_element += '</td>'
+                            
+                        })
+
+                    table_element += '</tr>'
+                    
+                    
+                })
+            table_element += '</table>'            
+            $('.table').html(table_element)    
+
+            
+        })
+        
+        
+    </script>
+</head>
+<body>
+    <div class="table">
+        
+    </div>
+</body>
+</html>
