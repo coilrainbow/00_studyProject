@@ -57,11 +57,30 @@ git push -u origin master
 ( 이미 다른 컴퓨터에서  1,2,3,4,5를 끝내고 작업을 하는 도중! 
 새로운 pc에서 작업을 진행 해야할 상황이 생겼다 할 경우 )
 
-다운로드 받은 작업파일들을 원하는 경로에 설치해 준 후 > git bash를 실행 >바로 4,5로 진행한다.
 
-4.git remote add origin https://github.com/본인아이디/저장소이름.git
+push : 0.push > ** > 1 > 2 > 4
+overwrite pull : 0.pull > ** > 1 > 2 > 3
 
-5.git push -u origin master
+0.push : 다운로드 받은 작업파일들을 원하는 경로에 설치해 준 후 > git bash를 실행 
+
+0.pull :받기를 원하는 폴더를 생성한다.
+생성한 폴더에서 bash 실행 
+
+** git config --global --list 로  user.name, user.email 현황을 확인하고 본인이 아닌것은 삭제한다. 
+삭제법은 아래 참고.
+
+1.git init 하여 저장소를 생성한다. 
+
+본인으로 등록되어 있거나 **의 과정을 거치면 연동 후
+2.git remote add origin https://github.com/본인아이디/저장소이름.git
+
+3. overwrite pull 하거나
+3.  1.git fetch --all
+    2.git reset --hard origin/master
+
+
+4. push 한다.
+4. git push -u origin master
 
 
 

@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>**scope</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    <script>
+        var sss ={}
+        sss.ooo="kkk"
+        
+        console.log(sss)
+        console.log(sss.ooo)
+        
+        
+        var helloCtrl=function($scope){
+            $scope.name ='world';
+            $scope.address = 'korea';
+            // var 안붙임
+        }
+        
+        
+        
+        
+    </script>
+</head>
+<body ng-app>
+<!-- scope : 함수로 데이터를 만들어서 뿌려주는 것     -->
+
+    <div ng-controller="helloCtrl">
+        <!--say hello : <input type="text" name="" ng-model="name" />-->
+        name test : <input type="text" name="" ng-model="name"/>
+        name test : <input type="text" name="" ng-model="address"/>
+        <h1>hello {{name}} {{address}}</h1>
+    </div>
+    
+</body>
+</html>
