@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    <script>
+        var worldCtrl = function($scope){
+            $scope.population = 7000; 
+            // 지역변수의 역할
+            $scope.index = [
+                    {"name":"한국","population":"7000"},
+                    {"name":"일본","population":"77000"},
+                    {"name":"인도","population":"777000"},
+                    {"name":"중국","population":"7777000"},
+                ]
+
+        }
+        
+        
+    </script>
+</head>
+<body ng-app>
+    <div ng-controller="worldCtrl">
+        <!--영역만들고-->
+        <ul ng-repeat="element in index">
+            <!--발동할 기능-->
+            <li>
+                <!--제이슨 에서 불러오기-->
+                {{element.name}}의 인구는 {{element.population}}만이다.
+            </li>
+        </ul>
+        <p>아시아의 인구는 {{population}}만이다.</p>
+    </div>
+    
+</body>
+</html>
+

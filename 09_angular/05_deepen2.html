@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    <script>
+        
+        var worldCtrl = function($scope){
+            
+            $scope.population = 6000000000;
+            $scope.countries =  [
+                    {"name":"한국","population":70000000},
+                    {"name":"중국","population":1300000000},
+                    {"name":"일본","population":200000000},
+                 ]
+            
+            $scope.asianPercentage = function(countryPopulation){
+                return (countryPopulation / $scope.population) * 100;
+            }
+            $scope.asiansum =function(a){
+                return a 
+            }
+            
+        } 
+        
+        
+    </script>
+    
+</head>
+<body ng-app>
+    
+    <div ng-controller="worldCtrl">
+        
+        <ul ng-repeat="country in countries">
+            <li>나라:{{country.name}}, 의  인구는 {{country.population}} 퍼센트 인구이다<br />
+                아시아의 전체인구는 {{asianPercentage(country.population)}}퍼센트이다.
+            
+            </li>
+            
+        </ul>
+        
+        <p>전 세계의 인구는 {{population}}이다.</p>
+        <p>동양인의 인구는 {{asiansum()}}이다.</p>
+        
+    </div>
+    
+    
+</body>
+</html>
