@@ -21,11 +21,10 @@ $(window).load(function(){
     $('.content section').each(function(){
         spot.push($(this).offset().top)
     })
-    // console.log(spot)
     $('nav a').click(function(){
 
         var idx = $(this).parent().index();
-        // console.log(idx)
+
         $('html,body').animate({
             scrollTop:spot[idx]
         })
@@ -47,7 +46,6 @@ $(function(){
     })
     var silidewidth = $('.slidebanner').width()
 
-    // console.log(idx)
     $('.next').click(function(){
         $('.slidebanner li').eq(idx).removeClass('on').children('img').stop().animate({
             left:-silidewidth
@@ -59,7 +57,7 @@ $(function(){
         })
 
         idx++
-        // console.log(idx)
+
 
         if(idx == $('.slidebanner li').length){
             idx= 0
@@ -111,8 +109,7 @@ $(function(){
     $('.slidebanner li a').click(function(){
         idx =$(this).parent().index()
         var his =$('.slidebanner li.on').index()
-        // console.log(idx)
-        // console.log(his)
+        
 
         if(idx > his){
             $('.slidebanner li.on').removeClass('on').children('img').animate({
