@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    <script>
+        
+        var helloCtrl = function($scope){
+            
+        }
+
+    </script>
+</head>
+<body ng-app ng-init="thing={name:'world', yyy:'1999', name1:'world1', name2:'world2', name3:'world3'}">
+    <h1>hello {{thing.name}} {{thing.yyy}}</h1>
+    <h1>hello {{thing.name1}} {{thing.yyy}}</h1>
+    <h1>hello {{thing.name2}} {{thing.yyy}}</h1>
+    <h1>hello {{thing.name3}} {{thing.yyy}}</h1>
+
+    <div ng-controller="helloCtrl">
+        say hello to : <input type="text" name="" ng-model="thing.name" />
+        <h2>{{thing.name}}</h2>
+    </div>    
+        
+</body>
+</html>

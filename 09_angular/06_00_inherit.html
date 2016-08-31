@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    <script>
+        
+        var helloCtrl = function($scope){
+            
+        }
+        var nohelloCtrl = function($scope){
+            $scope.name = "하하하"
+            // ex> $scope.name = $scope.name
+        }
+        
+    </script>
+</head>
+<body ng-app ng-init="name ='world'">
+        <h1>hello {{name}}</h1>
+    <div ng-controller="helloCtrl">
+        say hello to : <input type="text" ng-model="$parent.name" name="" /> <br />
+        hello, {{name}}!
+    </div>
+    <div ng-controller="nohelloCtrl">
+        say hello to : <input type="text" ng-model="$parent.name" name="" /> <br />
+        hello, {{name}}!
+    </div>
+    ng-init에는 많은 기본값이 들어간다.
+    $parent.name = 부모의 name값을 가져온다. 
+    
+    네임값을 따로 자체적으로 만들지만 기본값을 쓰고 싶을때 .
+</body>
+</html>

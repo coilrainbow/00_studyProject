@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script>
+        
+        $(function(){
+            
+            var name = "친구들"
+            var fruit = ['사과','배','포도','블루베리','망고','파인애플','참외']
+            $('#greeting').text("hello"+name);
+            
+            for(var i = 0 in fruit){
+                
+                var html = "";
+                html += "<li>";
+                html += "<a href='"+fruit[i]+"'>";
+                html += fruit[i];
+                html += "</a>";
+                html += "</li>";
+                
+                $('#favorite').append(html);
+            }
+        })
+        
+    </script>
+    
+    
+</head>
+<body>
+    <h1 id="greeting"></h1>
+    <h2>좋아하는과일</h2>
+    <ul id="favorite"></ul>
+    
+    
+</body>
+</html>

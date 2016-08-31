@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    
+    <script>
+        var app = angular.module('hello',[]);
+        
+        app.controller('HelloCtrl',function($scope){
+        
+            $scope.firstName = "진석";
+            $scope.listName = "서";
+            
+        })
+        
+    </script>
+    
+    
+</head>
+<body>
+    <div ng-app="hello">
+        <div ng-controller="HelloCtrl">
+            
+               성 <input type="text" ng-model="lastName"/><br/>
+               이름 <input type="text" ng-model="firstName"/><br/>
+               
+               <h1>{{listName + firstName}}</h1>
+        </div>
+    </div>
+
+
+    
+    
+</body>
+</html>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    <script>
+        var app = angular.module('hello',[])
+        app.controller('helloCtrl',function($scope){
+            $scope.firstName
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <div>
+            성<input type="text"><br />
+            이름<input type="text"><br />
+            
+            <h1></h1>
+        </div>
+    </div>
+    
+</body>
+</html>
