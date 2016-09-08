@@ -124,9 +124,9 @@ function Search(){
         <div ng-controller="MemoryCtrl" class="wrap">
             <span>외계인일용직노동자 앵귤러 JS 시리즈</span>    
             <h1>Information</h1>
-                <div class="search">
-                    <input type="text" ng-model="text" placeholder="검색어를 입력하세요." class="searchField"/>
-                </div>
+            <div class="search">
+                <input type="text" ng-model="text" placeholder="검색어를 입력하세요." class="searchField"/>
+            </div>
             <ul>                                   
                 <li ng-repeat="memory in memories | Search:text" ng-mouseover="memory.active = true" ng-mouseleave="memory.active = false" ng-class="{active:memory.active}">
                 <span class="title">{{memory.title}}</span>

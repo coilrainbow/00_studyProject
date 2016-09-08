@@ -1,0 +1,89 @@
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+
+<!--<head>-->
+<!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>-->
+<!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>-->
+
+<!--</head>-->
+<!--<body ng-app="myApp">-->
+
+<!--<p><a href="#/">Main</a></p>-->
+
+<!--<a href="#red">Red</a>-->
+<!--<a href="#green">Green</a>-->
+<!--<a href="#blue">Blue</a>-->
+
+<!--<div ng-view></div>-->
+
+<!--<script>-->
+<!--var app = angular.module("myApp", ["ngRoute"]);-->
+<!--app.config(function($routeProvider) {-->
+<!--    $routeProvider-->
+<!--    .when("/", {-->
+<!--        templateUrl : "main.html"-->
+<!--    })-->
+<!--    .when("/red", {-->
+<!--        templateUrl : "red.html"-->
+<!--    })-->
+<!--    .when("/green", {-->
+<!--        templateUrl : "green.html"-->
+<!--    })-->
+<!--    .when("/blue", {-->
+<!--        templateUrl : "blue.html"-->
+<!--    });-->
+<!--});-->
+<!--</script>-->
+
+<!--<p>Click on the links to navigate to "red.htm", "green.htm", "blue.htm", or back to "main.htm"</p>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+</head>
+
+<body ng-app="myApp">
+
+<p><a href="#/">Main</a></p>
+
+<a href="#red">color 1</a>
+<a href="#blue">color 2</a>
+
+<p>Click on the links.</p>
+
+<p>Note that each "view" has its own controller which each gives the "msg" variable a value.</p>
+
+<div ng-view></div>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "main.html",
+    })
+    .when("/red", {
+        templateUrl : "red.html",
+        controller : "redCtrl"
+    })
+    .when("/blue", {
+        templateUrl : "blue.html",
+        controller : "blueCtrl"
+    });
+});
+app.controller("redCtrl", function ($scope) {
+    $scope.msg = "I love Red";
+});
+app.controller("blueCtrl", function ($scope) {
+    $scope.msg = "I love Blue";
+});
+
+</script>
+
+</body>
+</html>
+

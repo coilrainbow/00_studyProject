@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+   <script>
+        $(function(){
+                
+            var stop = 0;
+            
+            
+                function ani(){
+                   $('body').animate({
+                       scrollTop:'100px'
+                   },function(){
+                      stop = 0
+                   })
+                }
+                
+            $("html, body").on('mousewheel DOMMouseScroll', function(e) {
+                console.log(e)
+                e.preventDefault();
+                
+                var y = e.originalEvent.deltaY
+                
+                if(y > 0 && stop == 0){
+                    stop =1
+                    ani()
+                    
+                }else if(y < 0 && stop == 0){
+                    stop =1
+                    
+                    ani()
+                    
+                }
+                
+              
+            });
+        });
+   </script>
+    
+</head>
+<body>
+    <div style="height:2000px; border:1px #F00 solid;"></div>
+   
+</body>
+</html>
